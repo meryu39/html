@@ -6,9 +6,10 @@
 <title>겜인포판</title></head>
 <style>
 
-	body { background-color: lightgrey; }
+	body { background-color: lightgreen; }
 	title:first-letter { color : blue; }
 	li:hover { background : white; }
+	hr { border : 3px solid white; }
 
 	.menu {
 		display: flex;
@@ -32,13 +33,45 @@
     	margin-right: 20px;
    	 	border-radius: 20%;
    	 }
+#bluename {
+	margin-left: 450px;
+	color : blue;
+	text-shadow : 20px 20px 3px red;
+   }
 	
 </style>
+
+<script>
+	function Account(id, passwd) {
+	
+	this.id = id; // 아이디
+	this.passwd = passwd; // 비밀번호
+	
+	this.login = function (){
+		if((this.id == id) && (this.passwd == passwd)){
+			return true
+		}
+		else if{
+			return false;
+		}
+	}
+	this.join = function (id,passwd) {
+		this.id = id; 
+		this.passwd = passwd; }
+	return ;
+}
+
+</script>
+
 <div class="header">
     <div class="image">
+    	<a href="main.html" height="5" width="10" target="_self">
         <img src="https://postfiles.pstatic.net/MjAyMzA5MjBfMTA5/MDAxNjk1MjE3MjA3MDA1.KaObaBTka2d1MMIixTdzb52dHOV1hTgWevqORvny7Gog.p1Wv09nr5FwQiacQCVp5LghIjYZiNWds12G7MrI8n-0g.JPEG.yunsik0309/OIG.jpg?type=w966" width="100" height="100" class="logo">
+    </a>
     </div>
+    <ul id="bluename">
     <h1>겜인포판</h1>
+</ul>
 </div>
 <body>
 <h2>겜인포판 오신걸 환영합니다</h2>
@@ -46,28 +79,39 @@
 <hr>
 <div class="menu">
 	<h4><li><a href="gamenews.html">게임 뉴스</li></a>
-	<h4><li>게임 상점</li><h4>
+	<h4><li><a href="store.html">게임 상점</li></a>
 	<h4><li><a href="community.html">★게임 커뮤니티</li></a>
 	<h4><li>게임 신간</li><h4></div>
 
 <h1>겜인포판 로그인 화면</h1>
 <hr>
+<form name="fo" method="get">
+	<fieldset>
+	사용자 ID : <input type="text"
+	size="15" value="" placeholder="abc1234"><br>
+	비밀 번호 : <input type="password"
+	size="15" value="" placeholder="******">
+	<input type="submit"
+	value="완료">
+</fieldset>
+</form>
+<br>
 
 <form name="fo" method="get">
 	<fieldset>
 	<legend>회원가입</legend>
-	이름 <input type="text" size="4" value=""><br>
+	이름 <input type="text" size="4" value="" placeholder="홍길동"><br>
 	성별 <br>
 	남성 <input type="checkbox" value="1">
 
 	여성 <input type="checkbox" value="2"><br>
-	나이 <input type="text" size="2" value="">
+	나이 <input type="text" size="2" value="" placeholder="20">
 	
 	<br>
 	사용자 ID : <input type="text"
-	size="15" value=""><br>
+	size="15" value="" placeholder="abc1234" name = "id"><br>
 	비밀 번호 : <input type="password"
-	size="15" value="">
+	size="15" value="" placeholder="******" name = "pw">
 	<input type="submit"
 	value="완료">
 </fieldset>

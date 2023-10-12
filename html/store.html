@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "uft-8">
+
+<title>겜인포판</title></head>
+<style>
+
+	body { background-color: lightgreen; }
+	title:first-letter { color : blue; }
+	li:hover { background : white; }
+	hr { border : 3px solid white; }
+
+	.menu {
+		display: flex;
+	}
+	.menu h4 {
+		margin-right: 20px;
+		color : blue;
+	}
+	.menu h1 {
+		margin-left: 500px;
+	}
+	.header {
+   		display: flex;
+    	align-items: center;
+	}
+
+	.image {
+    	margin-right: 20px;}
+
+    .logo {
+    	margin-right: 20px;
+   	 	border-radius: 20%;
+   	 }
+#bluename {
+	margin-left: 450px;
+	color : blue;
+	text-shadow : 20px 20px 3px red;
+   }
+</style>
+
+<script>
+function add(){
+	var n1 = parseInt(document.getElementById("n1").value);
+	var n2 = parseInt(document.getElementById("n2").value);
+	var sum = n1 + n2;
+	document.getElementById("result").value = sum;
+}
+function sub(){
+	var n1 = parseInt(document.getElementById("n1").value);
+	var n2 = parseInt(document.getElementById("n2").value);
+	var sub = n1 - n2;
+	document.getElementById("result").value = sub;
+}
+function mul(){
+	var n1 = parseInt(document.getElementById("n1").value);
+	var n2 = parseInt(document.getElementById("n2").value);
+	var mul = n1 * n2;
+	document.getElementById("result").value = mul;
+}
+function div(){
+	var n1 = parseInt(document.getElementById("n1").value);
+	var n2 = parseInt(document.getElementById("n2").value);
+	var div = n1 / n2;
+	document.getElementById("result").value = div;
+}
+
+
+</script>	
+
+	
+<div class="header">
+    <div class="image">
+    	<a href="main.html" height="5" width="10" target="_self">
+        <img src="https://postfiles.pstatic.net/MjAyMzA5MjBfMTA5/MDAxNjk1MjE3MjA3MDA1.KaObaBTka2d1MMIixTdzb52dHOV1hTgWevqORvny7Gog.p1Wv09nr5FwQiacQCVp5LghIjYZiNWds12G7MrI8n-0g.JPEG.yunsik0309/OIG.jpg?type=w966" width="100" height="100" class="logo">
+    </a>
+    </div>
+    <ul id="bluename">
+
+    <h1>겜인포판</h1>
+</ul>
+</div>
+<body>
+<h2>겜인포판 오신걸 환영합니다</h2>
+<audio src="audio.mp4" controls loop></audio>
+<hr>
+<div class="menu">
+	<h4><li><a href="gamenews.html">게임 뉴스</li></a>
+	<h4><li><a href="store.html">★게임 상점</li></a>
+	<h4><li><a href="community.html">게임 커뮤니티</li></a>
+	<h4><li>게임 신간</li><h4>
+</div>
+
+<h1>게임뉴스 제휴사이트</h1>
+<h4>스팀 에픽게임즈</h4>
+<fieldset>
+	<form>
+
+		<input type="text" size="10" value="" id = "n1">
+		<input type="text" size="10" value="" id = "n2">
+
+		
+		<td>=</td>
+		<input type="button" value=" + " onclick="add()">
+     	<input type="button" value=" - " onclick="sub()">
+      	<input type="button" value=" * " onclick="mul()">
+      	<input type="button" value=" / " onclick="div()">
+		<td><input type="text" id = "result" size= "10"></td>
+	</form>
+</fieldset>
+<iframe src="https://play.google.com/store/apps/details?id=com.google.android.play.games&hl=ko&gl=US" name= "left"
+width="500" height="500"></iframe>
+<iframe src="https://www.microsoft.com/ko-kr/store/new-and-rising/games/pc" name= "right"
+width="500" height="500"></iframe>
+
+
+
+
+ <tbody>
+	<tr>
+
+    </tr>
+ </tbody>
+</table>
+
+</body>
+</html>
+
+
+
