@@ -44,6 +44,21 @@
 }
 </style>
 
+
+<script>
+	function fum() {
+	let spanArray = document.getElementsByTagName("span");
+	for(let i=0; i<spanArray.length; i++) {
+	var span = spanArray[i];
+	span.style.color = "yellow";
+	span.style.fontSize = "25px";
+	}
+}
+
+</script>
+
+
+
 <div class="header">
     <div class="image">
     	<a href="main.html" height="5" width="10" target="_self">
@@ -72,28 +87,33 @@
 <dl>
 <ul id = "backcolor_game">
 <dt><strong>-----------9월 신작게임-----------
-<dt><strong>P의 거짓 | </strong>
+<form>
+	<input type="button" value="게임 이름 강조" onclick="fum()">
+</form>
+<p>
+	
+<dt><strong><span>P의 거짓 | </span></strong>
 	<a href="https://www.liesofp.com/ko-kr/">공식홈페이지</a>
 
 <dd>네오위즈에서 출시한 3인칭 소울라이크 장르이다
 	프롬소프트의 다크소울 시리즈의 영향을 많이 받았다.
 <p>
-<dt><strong>스타필드 | </strong>
+<dt><strong><span>스타필드 | </span></strong>
 	<a href="https://bethesda.net/ko/game/starfield">공식홈페이지</a>
 <dd>베데스다 사에서 만든 SF 오픈 월드 ARPG
 	우주를 여행하면 스토리를 진행한다.
 <p>
-<dt><strong>사이버펑크 2077:팬텀 리버티 | </strong>
+<dt><strong><span>사이버펑크 2077:팬텀 리버티 | </span></strong>
 	<a href="https://www.cyberpunk.net/us/ko/phantom-liberty">공식홈페이지</a>
 <dd>1인칭 오픈 월드 액션 RPG 
 	사이버펑크의 DLC로, 퍼시피카라는 지역에서 벌이는 첩보 스릴러다.
 <p>
-<dt><strong>이스 X -노딕스- | </strong>
+<dt><strong><span>이스 X -노딕스- | </span></strong>
 	<a href="https://www.cloudedleopardent.com/game/ysx/kr/">공식홈페이지</a>
 <dd>35년동안 롱런한 이스 시리즈, 시리즈 최초로 소울라이크 요소를 넣었다.
 	아돌 크리스틴을 주인공으로, 수많은 섬과 도시를 여행하는 rpg장르의 게임
 <p>
-<dt><strong>페이데이 3 | </strong>
+<dt><strong><span>페이데이 3 | </span></strong>
 	<a href="https://www.paydaythegame.com/payday3/?lang=ko">공식홈페이지</a>
 <dd>4인 협동 플레이게임, 은행강도가 되어 은행을 털고 밀수를 하는 등의 범죄활동이 게임의 주 콘텐츠이다. 이전의 성공작인 페이데이2의 재미를 더 극대화시켰다고 한다. 
 </ul>

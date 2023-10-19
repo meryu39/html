@@ -41,8 +41,36 @@
 	
 </style>
 
+
+
+
 <script>
-	function Account(id, passwd) {
+
+	let win=null;
+	function showHTML() {
+	if(win == null || win.closed)
+	win = window.open("", "outWin", "width=300,height=200");
+
+	win.document.open();
+	
+	let name = document.getElementById("name").value;
+    let id = document.getElementById("id").value;
+   	let age = document.getElementById("age").value;
+    let pw = document.getElementById("pw").value;
+
+    win.document.write("이름: " + name);
+    win.document.write("<br>");
+    win.document.write("나이: " + age);
+    win.document.write("<br>");
+    win.document.write("아이디: " + id);
+    win.document.write("<br>");
+
+    win.document.write("비밀번호: " + pw);
+	win.document.close();
+	}
+
+
+	/*function Account(id, passwd) {
 	
 	this.id = id; // 아이디
 	this.passwd = passwd; // 비밀번호
@@ -59,7 +87,21 @@
 		this.id = id; 
 		this.passwd = passwd; }
 	return ;
-}
+	}
+	*/
+	
+	function createDIV() {
+	let obj = document.getElementById("parent");
+	let newDIV = document.createElement("div");
+	newDIV.innerHTML = "새로 생성된 DIV입니다.";
+	newDIV.setAttribute("id", "myDiv");
+	newDIV.style.backgroundColor = "yellow";
+	newDIV.onclick = function() {
+	let p = this.parentElement; // 부모 HTML 태그 요소
+	p.removeChild(this); // 자신을 부모로부터 제거
+	};
+	obj.appendChild(newDIV);
+	}
 
 </script>
 
@@ -71,6 +113,7 @@
     </div>
     <ul id="bluename">
     <h1>겜인포판</h1>
+
 </ul>
 </div>
 <body>
@@ -97,31 +140,39 @@
 </form>
 <br>
 
+
 <form name="fo" method="get">
 	<fieldset>
 	<legend>회원가입</legend>
-	이름 <input type="text" size="4" value="" placeholder="홍길동"><br>
+	이름 <input type="text" size="4" value="" placeholder="홍길동" id = "name"><br>
 	성별 <br>
 	남성 <input type="checkbox" value="1">
 
 	여성 <input type="checkbox" value="2"><br>
-	나이 <input type="text" size="2" value="" placeholder="20">
+	나이 <input type="text" size="2" value="" placeholder="20" id = "age">
 	
 	<br>
 	사용자 ID : <input type="text"
-	size="15" value="" placeholder="abc1234" name = "id"><br>
+	size="15" value="" placeholder="abc1234" id = "id"><br>
 	비밀 번호 : <input type="password"
-	size="15" value="" placeholder="******" name = "pw">
-	<input type="submit"
-	value="완료">
+	size="15" value="" placeholder="******" id = "pw">
+	<button onclick="showHTML()">완료</button>
 </fieldset>
-<small> 문의사항 Gmail: ks0309g@gmail.com</small>
+<small> 문의사항 Gmail: *****.com</small>
 </form>
- <tbody>
+<tbody>
+ <id="parent">
+ 	<fieldset>방명록</fieldset>
+ 	<textarea id="textlog" rows="10" cols="50"></textarea>
+	<button onclick="document.write(textlog.value)">등록</button> 
+	
+	<a href="javascript:createDIV()">DIV 생성(방명록)</a>
+
+
 	<tr>
 
     </tr>
- </tbody>
+</tbody>
 </table>
 
 </body>
