@@ -1,104 +1,118 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset = "uft-8">
+	<script>
+	let today = new Date();
 
-<title>겜인포판</title></head>
+	document.write("현재 시간 : " + today.toLocaleString() + "<br>");
+
+	let p;
+
+	function init() {
+		p = document.getElementById("p");
+		p.onmouseover = over;
+		p.onmouseout = out;
+	}
+
+	function over() {
+		p.style.backgroundColor = "red";
+		p.style.color = "white";
+	}
+
+	function out() {
+		p.style.backgroundColor = "white";
+		p.style.color = "red";
+
+	}
+
+	function displayAlert() {
+  alert("이 사이트는 2023년에 만들어졌습니다.");
+}
+	</script>
+	<meta charset="utf-8">
+	<title>겜인포판</title>
+</head>
 <style>
-
 	body { background-color: lightgreen; }
-	title:first-letter { color : blue; }
-	li:hover { background : white; }
-	hr { border : 3px solid white; }
+	title:first-letter { color: blue; }
+	li:hover { background: white; }
+	hr { border: 3px solid white; }
 	.menu {
 		display: flex;
 	}
 	.menu h4 {
 		margin-right: 20px;
-		color : blue;
+		color: blue;
 	}
 	.menu h1 {
 		margin-left: 500px;
 	}
 	.header {
-   		display: flex;
-    	align-items: center;
+		display: flex;
+		align-items: center;
 	}
 
 	.image {
-    	margin-right: 20px;}
+		margin-right: 20px;
+	}
 
-    .logo {
-    	margin-right: 20px;
-   	 	border-radius: 20%;
-   	 }
-#time{
-	margin-left: 1000px;
-}
-   	 
-#bluename {
-	margin-left: 450px;
-	color : blue;
-	text-shadow : 20px 20px 3px red;
-   }
+	.logo {
+		margin-right: 20px;
+		border-radius: 20%;
+	}
 
+	#time {
+		margin-left: 1000px;
+	}
 
-   	
-
-
-
-
+	#bluename {
+		margin-left: 450px;
+		color: blue;
+		text-shadow: 20px 20px 3px red;
+	}
 </style>
-
-<script>
-	let today = new Date();
-
-	document.write("현재 시간 : " + today.toLocaleString()+ "<br>" );
-
-</script>
-
-<div class="header">
-	<div class="image">
-		
-		<a href="main.html" height="5" width="10" target="_self">
-        <img src="https://postfiles.pstatic.net/MjAyMzA5MjBfMTA5/MDAxNjk1MjE3MjA3MDA1.KaObaBTka2d1MMIixTdzb52dHOV1hTgWevqORvny7Gog.p1Wv09nr5FwQiacQCVp5LghIjYZiNWds12G7MrI8n-0g.JPEG.yunsik0309/OIG.jpg?type=w966" width="100" height="100" class="logo">
-    </a>
-    </div>
-   
-	<ul id="bluename">
-    <h1>겜인포판 </h1>
-	</ul>
+<body onload="init()">
+	<div class="header">
+		<div class="image">
+			<a href="main.html" height="5" width="10" target="_self">
+				<img src="https://postfiles.pstatic.net/MjAyMzA5MjBfMTA5/MDAxNjk1MjE3MjA3MDA1.KaObaBTka2d1MMIixTdzb52dHOV1hTgWevqORvny7Gog.p1Wv09nr5FwQiacQCVp5LghIjYZiNWds12G7MrI8n-0g.JPEG.yunsik0309/OIG.jpg?type=w966" width="100" height="100" class="logo">
+			</a>
+		</div>
+		<ul id="bluename">
+			
+				<h1>겜인포판</h1>
+			
+		</ul>
 	</div>
-</div>
+</body>
 <body>
-<h2>겜인포판 오신걸 환영합니다</h2>
-<hr>
-<div class="menu">
-	<h4><li><a href="gamenews.html">게임 뉴스</li></a>
-	<h4><li><a href="store.html">게임 상점</li></a>
-	<h4><li><a href="community.html">게임 커뮤니티</li></a>
-	<h4><li>게임 신간</li><h4>
-</div>
+	
+	<h2><p id="p">겜인포판 오신걸 환영합니다</p> </h2> 
+	<a href="#" onclick="displayAlert()" margin-left : 1000px>
+    사이트가 만들어진 연도
+  	</a>
 
-<h4><li><a href="9m.html">9월 신작 게임 소식</li></a>
-<h4><li>10월 신작 게임 소식</li><h4>
-<h4><li>11월 신작 게임 소식</li><h4>
-<h4><li>12월 신작 게임 소식</li><h4>
-<dl>
+	 
+	<hr>
 
+	<div class="menu">
+		<h4><li><a href="gamenews.html">게임 뉴스</a></li>
+		<h4><li><a href="store.html">게임 상점</a></li>
+		<h4><li><a href="community.html">게임 커뮤니티</a></li>
+		<h4><li>게임 신간</li>
+	</div>
 
-<iframe src="audio.html" name ="left" width="400" height="70"></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cGy0H_-A0b0?si=2WJN2hppLZ7XjSD9&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
- <tbody>
-	<tr>
-
-    </tr>
- </tbody>
-</table>
-
+	<h4><li><a href="9m.html">9월 신작 게임 소식</a></li>
+	<h4><li>10월 신작 게임 소식</li>
+	<h4><li>11월 신작 게임 소식</li>
+	<h4><li>12월 신작 게임 소식</li>
+	<dl>
+		<iframe src="audio.html" name="left" width="400" height="70"></iframe>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/cGy0H_-A0b0?si=2WJN2hppLZ7XjSD9&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		<tbody>
+			<tr>
+			</tr>
+		</tbody>
+	</table>
 </body>
 </html>
-
-
-
